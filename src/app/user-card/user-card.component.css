@@ -1,0 +1,12 @@
+.user-card {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 6px;
+}
+
+.user-card h4 {
+    text-align: center;
+}
