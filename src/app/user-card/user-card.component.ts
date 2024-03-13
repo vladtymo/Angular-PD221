@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IUser } from '../user';
 
 @Component({
@@ -9,11 +9,12 @@ import { IUser } from '../user';
   styleUrl: './user-card.component.css'
 })
 export class UserCardComponent {
-  // todo: make as an input paramteter
+
+  @Input()
   user: IUser = {
-    id: 101,
-    name: "Vlad Tymoshchuk",
-    email: "vtymo@gmail.com",
-    admin: true
+    id: 0,
+    name: "",
+    email: "",
+    admin: false
   }
 }

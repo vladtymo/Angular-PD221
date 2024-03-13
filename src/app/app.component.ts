@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { IUser } from './user';
+import { IUser, USERS } from './user';
 import { UserCardComponent } from './user-card/user-card.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 // decorator (like attribute in C#)
 @Component({
@@ -14,8 +15,12 @@ import { UserCardComponent } from './user-card/user-card.component';
 export class AppComponent {
   // properties
   title = 'To-Do List Application';
+  users: IUser[] = USERS;
 
+  constructor() {
+    console.log(this.users);
+
+  }
 
   // event handlers
-
 }

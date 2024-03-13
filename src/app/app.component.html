@@ -2,12 +2,19 @@
   <h1>Hello Angular!</h1>
 
   <!-- Bindings:
-    * one-way: {{variable}}
+    - one-way: {{variable}}
   -->
   <p>This is: {{title}}</p>
 
-  <app-user-card></app-user-card>
-  <app-user-card></app-user-card>
-  <app-user-card></app-user-card>
-  <app-user-card></app-user-card>
+  <!-- Structural directives:
+    - ngIf="condition"
+    - ngFor="let i in collection"
+  -->
+
+  @for (user of users; track user.id) {
+  <app-user-card [user]="user"></app-user-card>
+  } @empty {
+  <p>User list is empty!</p>
+  }
+
 </div>

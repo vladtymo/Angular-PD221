@@ -1,5 +1,13 @@
-<div class="user-card">
+<!-- Attribute directives: [class.name]="condition" -->
+
+<div class="user-card" [class.admin]="user.admin">
     <h4>User Card</h4>
     <p>Email: {{user.email}}</p>
     <p>Admin: {{user.admin ? "Yes" : "No"}}</p>
 </div>
+
+<!-- Common Angular commands:
+    * create new project: ng new
+    * build project: ng serve [--open]
+    * create component: ng [g]enerate [c]omponent <name>
+-->
