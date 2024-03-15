@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IUser, USERS } from './user';
 import { UserCardComponent } from './user-card/user-card.component';
-import { BrowserModule } from '@angular/platform-browser';
 
 // decorator (like attribute in C#)
 @Component({

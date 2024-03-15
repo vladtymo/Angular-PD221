@@ -1,9 +1,13 @@
 <!-- Attribute directives: [class.name]="condition" -->
 
+<!-- Pipes: uppercase, lowercase, percent, currency, date -->
+
 <div class="user-card" [class.admin]="user.admin">
     <h4>User Card</h4>
-    <p>Email: {{user.email}}</p>
+    <p>Name: {{user.name | firstUpper}}</p>
+    <p>Email: {{user.email | uppercase}}</p>
     <p>Admin: {{user.admin ? "Yes" : "No"}}</p>
+    <p>Birth: {{user.birthdate | date:'longDate'}}</p>
 </div>
 
 <!-- Common Angular commands:
