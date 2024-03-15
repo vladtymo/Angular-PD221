@@ -11,12 +11,15 @@ import { FirstUpperPipe } from "../first-upper.pipe";
   imports: [UpperCasePipe, DatePipe, LowerCasePipe, FirstUpperPipe]
 })
 export class UserCardComponent {
-
   @Input()
   user: IUser = {
     id: 0,
     name: "",
     email: "",
     admin: false
+  }
+
+  changeRole() {
+    this.user.admin = !this.user.admin;
   }
 }
