@@ -4,7 +4,7 @@
 
 <!-- Event Binding: (event)="handler(params)" -->
 
-<div class="user-card" [class.admin]="user.admin">
+<div class="user-card" [class.admin]="user.admin" (dblclick)="remove()">
     <h4>User Card</h4>
     <p>Name: {{user.name | firstUpper}}</p>
     <p>Email: {{user.email | uppercase}}</p>
