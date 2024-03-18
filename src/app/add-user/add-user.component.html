@@ -1,0 +1,23 @@
+<h2>Create New User</h2>
+<form [formGroup]="creationForm" (ngSubmit)="create()">
+    <label>
+        <span>Name:</span>
+        <input formControlName="name" type="text">
+    </label>
+    <label>
+        <span>Email:</span>
+        <input formControlName="email" type="email">
+    </label>
+    <label>
+        <span>Admin:</span>
+        <input formControlName="admin" type="checkbox">
+    </label>
+    <label>
+        <span>Birthdate:</span>
+        <input formControlName="birthdate" type="date">
+    </label>
+    <div>
+        <button type="submit">Create</button>
+        <button type="reset">Cancel</button>
+    </div>
+</form>

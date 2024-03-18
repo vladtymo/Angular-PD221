@@ -11,12 +11,13 @@
     - ngFor="let i in collection"
   -->
 
-
   @for (user of users; track user.id) {
   <app-user-card [user]="user" (removeEvent)="removeUser($event)"></app-user-card>
   } @empty {
   <p>User list is empty!</p>
   }
   <p>* Double click to delete user</p>
+
+  <app-add-user (addEvent)="addUser($event)"></app-add-user>
 
 </div>
